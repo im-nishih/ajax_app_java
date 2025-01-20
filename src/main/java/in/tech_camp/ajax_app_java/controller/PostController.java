@@ -37,6 +37,7 @@ public class PostController {
     post.setContent(form.getContent());
     postRepository.insert(post);
     PostEntity resultPost = postRepository.findById(post.getId());
+    System.out.println(resultPost);
     return ResponseEntity.ok(resultPost);
   }
 
