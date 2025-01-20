@@ -32,6 +32,7 @@ public class PostController {
 
   @PostMapping("/posts")
   public String savePost(@ModelAttribute("postForm") PostForm form){
+
     PostEntity post = new PostEntity();
     post.setContent(form.getContent());
     postRepository.insert(post);
